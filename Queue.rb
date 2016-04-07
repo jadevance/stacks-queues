@@ -1,13 +1,23 @@
+# FIFO 
 class Queue
   def initialize
-  end
-  
-  def dequeue
+    @store = Array.new
   end
   
   def enqueue(element)
+   @store << element
   end
   
-  def size
+  def dequeue
+  	@store.shift
   end
+  
+  
+  def size
+  	@store.length
+  end
+
+  def empty? 
+  	size == 0
+  end 
 end
